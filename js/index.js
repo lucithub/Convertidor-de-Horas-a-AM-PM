@@ -21,8 +21,13 @@ function convertirHora() {
         document.getElementById('imageDayNight').src = "/images/luna.png";
     }
     else if(hora >= 6 && hora <= 11){
+        if(isSunset(horaConvertida)){
+            document.body.style.backgroundColor = "rgb(242, 52, 8)";
+        }
+        else{
+            document.body.style.backgroundColor = "rgb(224, 175, 97)";
+        }
         resultado = 'Son las: ' + horaConvertida + ':' + minutos + ' AM';
-        document.body.style.backgroundColor = "rgb(224, 175, 97)";
         document.getElementById('imageDayNight').src = "/images/dia.png";
     }
     else if(hora >= 12 && hora <= 17){
@@ -31,9 +36,23 @@ function convertirHora() {
         document.getElementById('imageDayNight').src = "/images/dia.png";
     }
     else if(hora >= 18 && hora <= 23){
+        if(isSunset(horaConvertida)){
+            document.body.style.backgroundColor = "rgb(242, 52, 8)";
+        }
+        else{
+            document.body.style.backgroundColor = "rgb(64, 85, 89)";
+        }
         resultado = 'Son las: ' + horaConvertida + ':' + minutos + ' PM';
-        document.body.style.backgroundColor = "rgb(64, 85, 89)";
         document.getElementById('imageDayNight').src = "/images/luna.png";
     }
     document.getElementById('resultado').innerHTML = resultado;
+}
+//
+function isSunset(horaConvertida){
+    if(horaConvertida === 6){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
