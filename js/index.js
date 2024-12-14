@@ -22,7 +22,7 @@ function convertirHora() {
     }
     else if(hora >= 6 && hora <= 11){
         if(isSunset(horaConvertida)){
-            document.body.style.backgroundColor = "rgb(242, 52, 8)";
+            document.body.style.backgroundColor = "rgb(228, 161, 0)";
         }
         else{
             document.body.style.backgroundColor = "rgb(224, 175, 97)";
@@ -37,7 +37,7 @@ function convertirHora() {
     }
     else if(hora >= 18 && hora <= 23){
         if(isSunset(horaConvertida)){
-            document.body.style.backgroundColor = "rgb(242, 52, 8)";
+            document.body.style.backgroundColor = "rgb(228, 161, 0)";
         }
         else{
             document.body.style.backgroundColor = "rgb(64, 85, 89)";
