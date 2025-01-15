@@ -5,3 +5,43 @@ body{
     box-sizing: border-box;
     font-family: 'Nova Round', sans-serif;
 }
+
+/* FOOTER */
+footer {
+    margin-top: auto;
+    padding: 1rem;
+    background: linear-gradient(135deg, #fff3e6, #fff8f3, #fff3e6, #dce0f8, #f2f5ff, #e5f2ff);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: #8B4513;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.2);
+    transform: translateY(-1px);
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover .github-icon {
+    transform: scale(1.1);
+}
+/* FOOTER */
