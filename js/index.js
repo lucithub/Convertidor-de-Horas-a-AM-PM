@@ -1,6 +1,17 @@
-function convertirHora() {
-    let hora = document.getElementById('hora').value;
-    let minutos = document.getElementById('minutos').value;
+let hora = 0;
+let minutos = 0;
+function calculaMiHora(){
+    const ahora = new Date();
+    const horas = ahora.getHours().toString().padStart(2, '0');
+    const minutos = ahora.getMinutes().toString().padStart(2, '0');
+    convertirHora(horas, minutos)
+}
+
+function convertirHora(hora = 0, minutos = 0) {
+    if(hora === 0 && minutos === 0){
+        hora = document.getElementById('hora').value;
+        minutos = document.getElementById('minutos').value;
+    }
     if(hora >= 24 && minutos >= 60){
         alert("Ha ingresado incorrectamente la hora. Vuelva a intentarlo.");
         return;
