@@ -1,6 +1,10 @@
 function convertirHora() {
     let hora = document.getElementById('hora').value;
     let minutos = document.getElementById('minutos').value;
+    if(hora >= 24 && minutos >= 60){
+        alert("Ha ingresado incorrectamente la hora. Vuelva a intentarlo.");
+        return;
+    }
     let horaConvertida;
     let resultado;
     if (hora > 12){
